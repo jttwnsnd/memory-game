@@ -1,0 +1,101 @@
+@-webkit-keyframes mymove{
+	0%{left: -20px;}
+	100%{left: 20px;}
+}
+
+@-webkit-keyframes background1{
+	0%{right: -10px;}
+	100%{right: 10px;}
+}
+
+@-webkit-keyframes background2{
+	0%{left: -10px;}
+	100%{left: 10px;}
+}
+
+.tester{
+	position: relative;
+	background-color: pink;
+	-webkit-animation: mymove 2s infinite alternate;
+}
+.smaller1, .smaller2{
+	height: 10px;
+	background-color: #614AFA;
+	opacity: 0.4;
+}
+
+.smaller1{
+	-webkit-animation: background1 4s infinite alternate;
+}
+
+.smaller2{
+	-webkit-animation: background2 6s infinite alternate;
+}
+.wrap{
+	background-color: #BFBF40;
+	padding: 30px 90px;
+	height: 150px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.z{
+	z-index: 20;
+}
+
+.title-wrap{
+	margin: auto;
+	padding: 5px 25px;
+	background-color: #e9e9e9;
+}
+
+.header{
+	text-align: center;
+	opacity: 0.5;
+}
+
+.mg-tile{
+	perspective: 600px;
+}
+
+.mg-tile-inner{
+	transform-style: preserve-3d;
+	position: relative;
+	height: 220px;
+	transition: all .5s;
+}
+
+.mg-front, .mg-back{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 230px;
+	width: 100%;
+	backface-visibility: hidden;
+
+}
+
+.mg-front{
+	transform: rotateY(180deg);
+}
+.mg-back{
+	background: url('images/background.jpg') 50% 50% no-repeat;
+}
+
+.mg-contents{
+	display: inline-block;
+}
+.flip{
+	transform: rotateY(-180deg);
+}
+
+.goneBaby{
+	opacity: 0;
+}
+
+.buffer{
+	margin-top: 50px;
+}
+
+.messenger{
+	opacity: 0;
+}
